@@ -89,11 +89,11 @@ The user was able to read the assigned S3 bucket.
 
 The `EC2-Support` group has permissions assigned to support Amazon EC2 resources.
 
-![EC2-Support Group Permissions](09-premession%20group%20EC2_Support.png)
+![EC2-Support Group Permissions](09-premession%20group%20ec2_Support.png)
 
 The group policy defines the permissions granted to the `EC2-Support` group.
 
-![EC2-Support Group Policy](10-desc_premession%20group%20EC2_Support.png)
+![EC2-Support Group Policy](10-desc_premession%20group%20ec2_Support.png)
 
 #### Access Test
 
@@ -118,14 +118,14 @@ The user was denied access to Amazon S3.
 
 `user-3` is a member of the `EC2-Admin` group and has permissions to manage Amazon EC2 resources.
 
-![user-3 in EC2-Admin Group](15-user%203%20in%20group%20EC2_Admin.png)
+![user-3 in EC2-Admin Group](15-user%203%20in%20group%20ec2_Admin.png)
 The `EC2-Admin` group has permissions to manage Amazon EC2 resources.
 
-![EC2-Admin Group Permissions](16-premession%20group%20EC2_Admin.png)
+![EC2-Admin Group Permissions](16-premession%20group%20ec2_Admin.png)
 
 The group policy defines the permissions granted to the `EC2-Admin` group.
 
-![EC2-Admin Group Policy](17-desc_premession%20group%20EC2_Admin.png)
+![EC2-Admin Group Policy](17-desc_premession%20group%20ec2_Admin.png)
 
 #### Access Test
 
