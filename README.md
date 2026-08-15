@@ -2,137 +2,169 @@
 
 ## Project Overview
 
-This hands-on lab demonstrates how AWS IAM permissions control access to Amazon S3 and Amazon EC2 resources.
+This hands-on lab demonstrates how AWS IAM users, groups, and permissions control access to Amazon S3 and Amazon EC2 resources.
+
+The lab includes three IAM users with different levels of access. Each user's permissions were tested to verify what they can and cannot do.
 
 ## Objectives
 
-- Understand AWS IAM users and groups.
-- Explore IAM permissions and policies.
-- Test access to Amazon S3 resources.
-- Test access to Amazon EC2 resources.
-- Understand how permissions determine what an IAM user can access.
+* Understand AWS IAM users and groups.
+* Explore IAM permissions and policies.
+* Understand how IAM permissions control access to AWS resources.
+* Test access to Amazon S3 resources.
+* Test access to Amazon EC2 resources.
+* Verify allowed and denied actions for different IAM users.
 
 ## Lab Environment
 
-- AWS Management Console
-- AWS Identity and Access Management (IAM)
-- Amazon S3
-- Amazon EC2
+* AWS Management Console
+* AWS Identity and Access Management (IAM)
+* Amazon S3
+* Amazon EC2
 
 ## IAM Users and Groups
 
-### user-1
+| User     | IAM Group     | Access     | Permissions                                                     |
+| -------- | ------------- | ---------- | --------------------------------------------------------------- |
+| `user-1` | `S3-Support`  | Amazon S3  | Can access S3 resources. No EC2 access.                         |
+| `user-2` | `EC2-Support` | Amazon EC2 | Can view EC2 resources but cannot stop instances. No S3 access. |
+| `user-3` | `EC2-Admin`   | Amazon EC2 | Can view and stop EC2 instances. No S3 access.                  |
 
-- IAM Group: S3-Support
-- Access: Amazon S3
-- Amazon EC2: No access
+---
 
-### user-2
-
-- IAM Group: EC2-Support
-- Access: Amazon EC2
-- Permission: Can view EC2 resources but cannot stop instances
-- S3: No access
-
-### user-3
-
-- IAM Group: EC2-Admin
-- Access: Amazon EC2
-- Permission: Can view and stop EC2 instances
-- S3: No access
-  
 ## Lab Steps
 
 ### 1. IAM User and Group Configuration
 
 The lab uses three IAM users with different groups and permissions:
 
-- `user-1` → `S3-Support`
-- `user-2` → `EC2-Support`
-- `user-3` → `EC2-Admin`
-### 2. user-1 – S3 Support
+* `user-1` → `S3-Support`
+* `user-2` → `EC2-Support`
+* `user-3` → `EC2-Admin`
+
+---
+
+## 2. user-1 – S3 Support
 
 `user-1` is a member of the `S3-Support` group and has permissions to access Amazon S3 resources.
 
+### Group Membership
+
 ![user-1 in S3-Support Group](01-user%201%20in%20gruop%20S3_Support.png)
+
+### Group Permissions
 
 The `S3-Support` group has permissions that allow `user-1` to access Amazon S3 resources.
 
 ![S3-Support Group Permissions](02-premession%20group%20S3_Support.png)
 
-The group policy defines the permissions granted to the `S3-Support` group.
+### Permission Policy
+
+The policy defines the permissions granted to the `S3-Support` group.
 
 ![S3-Support Group Policy](03-desc_premession%20group%20S3_Support.png)
 
-#### Access Test
+### Access Tests
 
-`user-1` was tested to verify the permissions granted by the `S3-Support` group.
+`user-1` was able to access the assigned Amazon S3 resources.
 
 ![user-1 S3 Access](04-user%201%20allow%20s3.png)
 
-The user was denied access to Amazon EC2 because no EC2 permissions were assigned.
+`user-1` was denied access to Amazon EC2 because no EC2 permissions were assigned.
 
 ![user-1 EC2 Access Denied](05-user%201%20deny%20ec2.png)
 
 ![user-1 EC2 Access Denied](06-user1%20deny%20ec2.png)
 
-The user was able to read the assigned S3 bucket.
+`user-1` was able to read the assigned S3 bucket.
 
 ![user-1 Read S3 Bucket](07-user1%20allow%20read%20bucket.png)
 
+---
 
-### 3. user-2 – EC2 Support
+## 3. user-2 – EC2 Support
 
 `user-2` is a member of the `EC2-Support` group and has permissions to view Amazon EC2 resources.
 
+### Group Membership
+
 ![user-2 in EC2-Support Group](08-user2%20in%20group%20EC2_Support.png)
+
+### Group Permissions
 
 The `EC2-Support` group has permissions assigned to support Amazon EC2 resources.
 
-![EC2-Support Group Permissions](09-premession%20group%20ec2_Support.png)
+![EC2-Support Group Permissions](09-premession%20group%20EC2_Support.png)
 
-The group policy defines the permissions granted to the `EC2-Support` group.
+### Permission Policy
 
-![EC2-Support Group Policy](10-desc_premession%20group%20ec2_Support.png)
+The policy defines the permissions granted to the `EC2-Support` group.
 
-#### Access Test
+![EC2-Support Group Policy](10-desc_premession%20group%20EC2_Support.png)
 
-`user-2` was tested to verify the assigned EC2 permissions.
+### Access Tests
+
+`user-2` was able to access Amazon EC2 resources.
 
 ![user-2 EC2 Access](11-user%202%20allow%20ec2.png)
 
-The user was able to view EC2 resources.
+`user-2` was able to view EC2 instances.
 
 ![user-2 View EC2](12-user%202%20allow%20see%20ec2.png)
 
-The user was denied permission to stop an EC2 instance.
+`user-2` was denied permission to stop an EC2 instance.
 
 ![user-2 Stop EC2 Denied](13-user%202%20deny%20stop%20ec2.png)
 
-The user was denied access to Amazon S3.
+`user-2` was denied access to Amazon S3.
 
 ![user-2 S3 Access Denied](14-user%202%20deny%20s3.png)
 
+---
 
-### 4. user-3 – EC2 Admin
+## 4. user-3 – EC2 Admin
 
 `user-3` is a member of the `EC2-Admin` group and has permissions to manage Amazon EC2 resources.
 
-![user-3 in EC2-Admin Group](15-user%203%20in%20group%20ec2_Admin.png)
+### Group Membership
+
+![user-3 in EC2-Admin Group](15-user%203%20in%20gruop%20EC2_Admin.png)
+
+### Group Permissions
+
 The `EC2-Admin` group has permissions to manage Amazon EC2 resources.
 
-![EC2-Admin Group Permissions](16-premession%20group%20ec2_Admin.png)
+![EC2-Admin Group Permissions](16-premession%20group%20EC2_Admin.png)
 
-The group policy defines the permissions granted to the `EC2-Admin` group.
+### Permission Policy
 
-![EC2-Admin Group Policy](17-desc_premession%20group%20ec2_Admin.png)
+The policy defines the permissions granted to the `EC2-Admin` group.
 
-#### Access Test
+![EC2-Admin Group Policy](17-desc_premession%20group%20EC2_Admin.png)
 
-`user-3` was tested to verify the assigned EC2 permissions.
+### Access Test
+
+`user-3` was able to stop an EC2 instance.
 
 ![user-3 Stop EC2 Permission](18-user%203%20allow%20stop%20ec2.png)
 
-The user was able to stop an EC2 instance successfully.
+The EC2 instance was successfully stopped.
 
 ![user-3 Stop EC2](19-user%203%20stop%20ec2.png)
+
+---
+
+## Results
+
+The lab successfully demonstrated how IAM permissions control access to AWS resources.
+
+* `user-1` → S3 access allowed, EC2 access denied.
+* `user-2` → EC2 viewing allowed, stopping instances denied, S3 access denied.
+* `user-3` → EC2 viewing and stopping instances allowed, S3 access denied.
+
+## Key Takeaways
+
+* IAM Groups can be used to manage permissions for multiple users.
+* IAM policies define which AWS resources and actions are allowed or denied.
+* Permissions should follow the principle of least privilege.
+* Different users can have different levels of access depending on their assigned IAM policies.
