@@ -60,8 +60,7 @@ The group policy:
 
 `user-1` can access Amazon S3:
 
-![user-1 S3 Access](04-user%201%20allow%20s3.png)
-
+![user-1 S3 Access](https://github.com/Hanaa25/AWS-IAM-S3-EC2-Lab/blob/main/04-user%201%20allow%20s3.png)
 `user-1` is denied access to Amazon EC2:
 
 ![user-1 EC2 Access Denied](05-user%201%20deny%20ec2.png)
@@ -78,7 +77,7 @@ The group policy:
 
 `user-2` is a member of the `EC2-Support` group.
 
-![user-2 in EC2-Support Group](08-user2%20in%20group%20EC2_Support.png)
+![user-2 in EC2-Support Group](https://github.com/Hanaa25/AWS-IAM-S3-EC2-Lab/blob/main/08-user2%20in%20group%20EC2_Support.png)
 
 The `EC2-Support` group permissions:
 
@@ -96,7 +95,7 @@ The group policy:
 
 `user-2` can view EC2 instances:
 
-![user-2 View EC2](12-user%202%20allow%20see%20ec2.png)
+![user-2 View EC2](https://github.com/Hanaa25/AWS-IAM-S3-EC2-Lab/blob/main/12-user%202%20allow%20see%20ec2.png)
 
 `user-2` cannot stop EC2 instances:
 
