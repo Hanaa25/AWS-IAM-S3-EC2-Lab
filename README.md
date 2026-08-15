@@ -117,7 +117,6 @@ The policy allows `user-2` to view Amazon EC2 resources but does not allow stopp
 
 ![user-2 EC2 Access](11-user%202%20allow%20ec2.png)
 
-`user-2` was able to view EC2 instances.
 
 `user-2` was able to view EC2 instances.
 
