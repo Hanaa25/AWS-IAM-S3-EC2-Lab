@@ -119,7 +119,7 @@ The policy allows `user-2` to view Amazon EC2 resources but does not allow stopp
 
 `user-2` was able to view EC2 instances.
 
-![user-2 View EC2](12-user%202%20allow%20%20see%20ec2.png)
+![user-2 View EC2](12-user%202%20allow%20see%20ec2.png)
 
 `user-2` was denied permission to stop an EC2 instance.
 
