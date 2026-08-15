@@ -97,7 +97,7 @@ The policy defines the permissions assigned to the `S3-Support` group.
 
 ### Group Membership
 
-![user-2 in EC2-Support Group](08-user2%20in%20group%20EC2_Support.png)
+![user-2 in EC2-Support Group](08-user-2%20in%20EC2-Support%20Group)
 
 ### Group Permissions
 
