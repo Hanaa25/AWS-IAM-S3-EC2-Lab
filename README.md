@@ -30,7 +30,7 @@ The lab includes three IAM users with different levels of access. Each user's pe
 |---|---|---|---|
 | `user-1` | `S3-Support` | Amazon S3 | Read-Only access to Amazon S3. No EC2 access. |
 | `user-2` | `EC2-Support` | Amazon EC2 | Read-Only access to Amazon EC2. Cannot stop instances. No S3 access. |
-| `user-3` | `EC2-Admin` | Amazon EC2 | Can view, start, and stop EC2 instances. No S3 access. |
+| `user-3` | `EC2-Admin` | Amazon EC2 | Can view, start, and stop EC2 instances. |
 
 ---
 
