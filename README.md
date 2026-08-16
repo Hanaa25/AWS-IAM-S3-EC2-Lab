@@ -98,7 +98,6 @@ The policy defines the permissions assigned to the `S3-Support` group.
 ### Group Membership
 
 ![user-2 in EC2-Support Group](08-user2%20in%20group%20EC2_Support.png)
-
 ### Group Permissions
 
 The `EC2-Support` group provides Read-Only access to Amazon EC2.
