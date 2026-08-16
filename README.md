@@ -62,7 +62,7 @@ The `S3-Support` group provides Read-Only access to Amazon S3.
 
 ### Permission Policy
 
-The group policy provides permissions to list and read Amazon S3 resources.
+The policy defines the permissions assigned to the `S3-Support` group.
 
 ![S3-Support Group Policy](03-desc_premession%20group%20S3_Support.png)
 
@@ -107,7 +107,7 @@ The `EC2-Support` group provides Read-Only access to Amazon EC2.
 
 ### Permission Policy
 
-The group policy allows `user-2` to view Amazon EC2 resources but does not allow stopping instances.
+The policy allows `user-2` to view Amazon EC2 resources but does not allow stopping instances.
 
 ![EC2-Support Group Policy](10-desc_premession%20group%20EC2_Support.png)
 
@@ -119,7 +119,7 @@ The group policy allows `user-2` to view Amazon EC2 resources but does not allow
 
 `user-2` was able to view EC2 instances.
 
-![user-2 View EC2](12-user%202%20allow%20see%20ec2.png)
+![user-2 View EC2](12-user%202%20allow%20%20see%20ec2.png)
 
 `user-2` was denied permission to stop an EC2 instance.
 
@@ -213,5 +213,5 @@ The lab successfully demonstrated how AWS IAM groups and policies control access
 - IAM groups can have policies attached to them.
 - IAM policies define which actions users are allowed or denied to perform.
 - Different users can have different levels of access to AWS resources.
-- The principle of least privilege helps provide users with only the permissions they need.
 - Testing both allowed and denied actions helps verify that IAM permissions are configured correctly.
+- IAM permissions should follow the principle of least privilege.
