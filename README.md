@@ -50,11 +50,9 @@ The lab uses three IAM users with different groups and permissions:
 
 `user-1` is a member of the `S3-Support` group and has Read-Only access to Amazon S3 resources.
 
-### User in S3-Support Group
+### Group Membership
 
-The image below shows `user-1` assigned to the `S3-Support` group.
-
-### Group Permissions
+### User in Group
 
 The `S3-Support` group provides Read-Only access to Amazon S3.
 
@@ -67,6 +65,8 @@ The policy defines the permissions assigned to the `S3-Support` group.
 `user-1` was able to access Amazon S3 resources.
 
 `user-1` was denied access to Amazon EC2.
+
+`user-1` was also denied access to Amazon EC2 resources.
 
 `user-1` was able to read the S3 bucket.
 
@@ -81,9 +81,7 @@ The policy defines the permissions assigned to the `S3-Support` group.
 
 `user-2` is a member of the `EC2-Support` group and has Read-Only access to Amazon EC2 resources.
 
-### User in EC2-Support Group
-
-The image below shows `user-2` assigned to the `EC2-Support` group.
+### User in Group
 
 ### Group Permissions
 
@@ -121,9 +119,7 @@ The `EC2-Admin` permissions allow the user to:
 - Start EC2 instances
 - Stop EC2 instances
 
-### User in EC2-Admin Group
-
-The image below shows `user-3` assigned to the `EC2-Admin` group.
+### User in Group
 
 ### Group Permissions
 
