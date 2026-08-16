@@ -177,7 +177,7 @@ The EC2 instance was successfully stopped.
 - EC2 view access: **Allowed**
 - EC2 start instance: **Allowed by policy**
 - EC2 stop instance: **Allowed**
-- S3 access: **Denied**
+
 
 ---
 
@@ -202,7 +202,7 @@ The lab successfully demonstrated how AWS IAM groups and policies control access
 - Can view Amazon EC2 resources.
 - Can start EC2 instances.
 - Can stop EC2 instances.
-- Cannot access Amazon S3.
+
 
 ---
 
